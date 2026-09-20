@@ -1,0 +1,462 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x24639F02C4DEC4F2",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../EEE102_Term_Project.gen/sources_1/bd/check1_block_design",
+      "name": "check1_block_design",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "lcd_controller_0": "",
+      "ps2_deserializer_0": "",
+      "ps2_scancode_filter_0": "",
+      "enigma_encryption_lo_0": ""
+    },
+    "ports": {
+      "error_led": {
+        "direction": "O"
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "reset:reset_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "check1_block_design_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "ps2_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "check1_block_design_ps2_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "ps2_data": {
+        "direction": "I"
+      },
+      "lcd_db": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "lcd_e": {
+        "direction": "O"
+      },
+      "lcd_rs": {
+        "direction": "O"
+      },
+      "reset_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "pin_rotorpin1_0": {
+        "direction": "I"
+      },
+      "pin_rotorpin2_0": {
+        "direction": "I"
+      },
+      "pin_rotorpin3_0": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "lcd_controller_0": {
+        "vlnv": "xilinx.com:module_ref:lcd_controller:1.0",
+        "ip_revision": "1",
+        "xci_name": "check1_block_design_lcd_controller_0_0",
+        "xci_path": "ip\\check1_block_design_lcd_controller_0_0\\check1_block_design_lcd_controller_0_0.xci",
+        "inst_hier_path": "lcd_controller_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "lcd_controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "check1_block_design_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "trigger": {
+            "direction": "I"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "lcd_rs": {
+            "direction": "O"
+          },
+          "lcd_e": {
+            "direction": "O"
+          },
+          "lcd_db": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "busy": {
+            "direction": "O"
+          }
+        }
+      },
+      "ps2_deserializer_0": {
+        "vlnv": "xilinx.com:module_ref:ps2_deserializer:1.0",
+        "ip_revision": "1",
+        "xci_name": "check1_block_design_ps2_deserializer_0_0",
+        "xci_path": "ip\\check1_block_design_ps2_deserializer_0_0\\check1_block_design_ps2_deserializer_0_0.xci",
+        "inst_hier_path": "ps2_deserializer_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ps2_deserializer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ps2_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "check1_block_design_ps2_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ps2_data": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "check1_block_design_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "scancode_ready": {
+            "direction": "O"
+          },
+          "scancode": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "error_led": {
+            "direction": "O"
+          }
+        }
+      },
+      "ps2_scancode_filter_0": {
+        "vlnv": "xilinx.com:module_ref:ps2_scancode_filter:1.0",
+        "ip_revision": "1",
+        "xci_name": "check1_block_design_ps2_scancode_filter_0_1",
+        "xci_path": "ip\\check1_block_design_ps2_scancode_filter_0_1\\check1_block_design_ps2_scancode_filter_0_1.xci",
+        "inst_hier_path": "ps2_scancode_filter_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ps2_scancode_filter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "check1_block_design_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "scancode_ready": {
+            "direction": "I"
+          },
+          "scancode": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "enigma_char": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "enigma_trigger": {
+            "direction": "O"
+          },
+          "cmd_enter": {
+            "direction": "O"
+          }
+        }
+      },
+      "enigma_encryption_lo_0": {
+        "vlnv": "xilinx.com:module_ref:enigma_encryption_logic:1.0",
+        "ip_revision": "1",
+        "xci_name": "check1_block_design_enigma_encryption_lo_0_5",
+        "xci_path": "ip\\check1_block_design_enigma_encryption_lo_0_5\\check1_block_design_enigma_encryption_lo_0_5.xci",
+        "inst_hier_path": "enigma_encryption_lo_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "enigma_encryption_logic",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pin_rotorpin1": {
+            "direction": "I"
+          },
+          "pin_rotorpin2": {
+            "direction": "I"
+          },
+          "pin_rotorpin3": {
+            "direction": "I"
+          },
+          "enigma_char": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "enigma_trigger": {
+            "direction": "I"
+          },
+          "cmd_enter": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "check1_block_design_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "trigger": {
+            "direction": "O"
+          },
+          "data_in": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "lcd_controller_0/clk",
+          "ps2_deserializer_0/clk",
+          "ps2_scancode_filter_0/clk",
+          "enigma_encryption_lo_0/clk"
+        ]
+      },
+      "enigma_encryption_lo_0_data_in": {
+        "ports": [
+          "enigma_encryption_lo_0/data_in",
+          "lcd_controller_0/data_in"
+        ]
+      },
+      "enigma_encryption_lo_0_trigger": {
+        "ports": [
+          "enigma_encryption_lo_0/trigger",
+          "lcd_controller_0/trigger"
+        ]
+      },
+      "lcd_controller_0_lcd_db": {
+        "ports": [
+          "lcd_controller_0/lcd_db",
+          "lcd_db"
+        ]
+      },
+      "lcd_controller_0_lcd_e": {
+        "ports": [
+          "lcd_controller_0/lcd_e",
+          "lcd_e"
+        ]
+      },
+      "lcd_controller_0_lcd_rs": {
+        "ports": [
+          "lcd_controller_0/lcd_rs",
+          "lcd_rs"
+        ]
+      },
+      "pin_rotorpin1_0_1": {
+        "ports": [
+          "pin_rotorpin1_0",
+          "enigma_encryption_lo_0/pin_rotorpin1"
+        ]
+      },
+      "pin_rotorpin2_0_1": {
+        "ports": [
+          "pin_rotorpin2_0",
+          "enigma_encryption_lo_0/pin_rotorpin2"
+        ]
+      },
+      "pin_rotorpin3_0_1": {
+        "ports": [
+          "pin_rotorpin3_0",
+          "enigma_encryption_lo_0/pin_rotorpin3"
+        ]
+      },
+      "ps2_clk_0_1": {
+        "ports": [
+          "ps2_clk",
+          "ps2_deserializer_0/ps2_clk"
+        ]
+      },
+      "ps2_data_0_1": {
+        "ports": [
+          "ps2_data",
+          "ps2_deserializer_0/ps2_data"
+        ]
+      },
+      "ps2_deserializer_0_error_led": {
+        "ports": [
+          "ps2_deserializer_0/error_led",
+          "error_led"
+        ]
+      },
+      "ps2_deserializer_0_scancode": {
+        "ports": [
+          "ps2_deserializer_0/scancode",
+          "ps2_scancode_filter_0/scancode"
+        ]
+      },
+      "ps2_deserializer_0_scancode_ready": {
+        "ports": [
+          "ps2_deserializer_0/scancode_ready",
+          "ps2_scancode_filter_0/scancode_ready"
+        ]
+      },
+      "ps2_scancode_filter_0_cmd_enter": {
+        "ports": [
+          "ps2_scancode_filter_0/cmd_enter",
+          "enigma_encryption_lo_0/cmd_enter"
+        ]
+      },
+      "ps2_scancode_filter_0_enigma_char": {
+        "ports": [
+          "ps2_scancode_filter_0/enigma_char",
+          "enigma_encryption_lo_0/enigma_char"
+        ]
+      },
+      "ps2_scancode_filter_0_enigma_trigger": {
+        "ports": [
+          "ps2_scancode_filter_0/enigma_trigger",
+          "enigma_encryption_lo_0/enigma_trigger"
+        ]
+      },
+      "reset_0_1": {
+        "ports": [
+          "reset",
+          "lcd_controller_0/reset"
+        ]
+      },
+      "reset_0_2": {
+        "ports": [
+          "reset_0",
+          "enigma_encryption_lo_0/reset"
+        ]
+      }
+    }
+  }
+}
